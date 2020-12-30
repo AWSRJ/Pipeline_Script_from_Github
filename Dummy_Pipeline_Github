@@ -52,7 +52,7 @@ pipeline
             }
         }
         
-        stage ('End of script'
+        stage ('End of script')
         {
             steps
             {
