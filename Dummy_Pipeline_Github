@@ -51,5 +51,13 @@ pipeline
                 echo 'Package deployed successfully to QA'
             }
         }
+        
+        stage ('End of script'
+        {
+            steps
+            {
+                echo 'Pipeline successfully completed'
+            }
+        }
     }
 }
