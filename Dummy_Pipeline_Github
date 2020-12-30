@@ -1,0 +1,55 @@
+pipeline
+{
+    agent any
+    
+    stages
+    {
+        stage ('Pull the artifacts from git repository https://github.com/AWSRJ/Pipeline_Script_from_Github/new/main')
+        {
+            steps
+            {
+                echo 'Downloadin artifacts...'
+            }
+        }
+        
+        stage ('Build the package')
+        {
+            steps
+            {
+                echo 'Package successfully build'
+            }
+        }
+        
+        stage ('Deploy package to Development environment')
+        {
+            steps
+            {
+                echo 'Package deployed successfully'
+            }
+        }
+        
+        stage ('Test the package')
+        {
+            steps
+            {
+                echo 'Package testing completed'
+            }
+        }
+        
+        stage ('Get approval from QA Manager')
+        {
+            steps
+            {
+                input "Please approve for QA deployment?"
+            }
+        }
+        
+        stage ('Deploy package to QA')
+        {
+            steps
+            {
+                echo 'Package deployed successfully to QA'
+            }
+        }
+    }
+}
